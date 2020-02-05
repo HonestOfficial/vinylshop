@@ -1,0 +1,54 @@
+<html>
+<head>
+<audio id="myAudio">
+  <source src="callme90s.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<style>
+.rotate {
+  animation: rotation 0s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.GoBTN:active ~ .rotate {
+	animation: rotation 0s infinite linear;
+
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script>
+var x = document.getElementById("myAudio"); 
+
+function playAudio() { 
+  x.play(); 
+} 
+
+function pauseAudio() { 
+  x.pause(); 
+} 
+
+
+$(document).ready(function(){
+  $("button").click(function(){
+    $(".rotate").css("animation", "rotation 8s infinite linear");
+  });
+});
+</script>
+</head>
+
+<body bgcolor="#00946f">
+<img src="callme90s.png" class="rotate" width="500" height="500" />
+<br>
+<button onclick="playAudio()" class="GoBTN" type="button">Play Vinyl</button>
+
+</body>
+</html>
