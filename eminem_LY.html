@@ -22,6 +22,22 @@
 	animation: rotation 0s infinite linear;
 
 }
+
+.imgr {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+}
+
+.imgrr {
+  position: absolute;
+  left: 450px;
+  top: 0px;
+  z-index: 1;
+}
+
+
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -46,7 +62,11 @@ $(document).ready(function(){
 </head>
 
 <body bgcolor="#00946f">
-<img src="eminem_LY.png" class="rotate" width="500" height="500" />
+<img src=player.png class="imgr">
+<img src=pin.png class="imgrr" height=280>
+
+<Br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="eminem_LY.png" class="rotate" width="500" height="500" />
 <br>
 <button onclick="playAudio()" class="GoBTN" type="button">Play Vinyl</button>
 
